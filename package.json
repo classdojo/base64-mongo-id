@@ -1,0 +1,31 @@
+{
+  "name": "base64-mongo-id",
+  "version": "1.0.0",
+  "description": "Tiny, browser-compatible mongo id shortener",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/classdojo/base64-mongo-id.git"
+  },
+  "keywords": [
+    "mongo",
+    "id",
+    "objectid",
+    "base64",
+    "base",
+    "64",
+    "shortner",
+    "short",
+    "encode",
+    "decode"
+  ],
+  "author": "Peter Hayes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classdojo/base64-mongo-id/issues"
+  },
+  "homepage": "https://github.com/classdojo/base64-mongo-id#readme"
+}
