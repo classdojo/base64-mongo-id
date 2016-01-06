@@ -1,6 +1,6 @@
 {
   "name": "base64-mongo-id",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny, browser-compatible mongo id shortener",
   "main": "index.js",
   "scripts": {
@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/classdojo/base64-mongo-id/issues"
   },
-  "homepage": "https://github.com/classdojo/base64-mongo-id#readme"
+  "homepage": "https://github.com/classdojo/base64-mongo-id#readme",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4"
+  }
 }

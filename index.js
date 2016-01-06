@@ -5,34 +5,40 @@ function parse2DigitInt64 (str) {
   return 64 * charsToNums[str[0]] + charsToNums[str[1]];
 }
 
+var longRegex = /^[0-9a-f]{24}$/;
+var shortRegex = /^[0-9a-zA-Z-_]{16}$/;
+
 module.exports = {
   
   longToShort: function (long) {
-    var output = "";
+    if (!longRegex.test(long)) {
+      throw new Error("`base64-mongo-id.longToShort` must receive an input matching " + longRegex.toString());
+    }
+    var output = [];
     for (var i = 0; i < long.length; i += 3) {
       var slice = long.slice(i, i + 3);
       var num = parseInt(slice, 16);
       var firstDigit = Math.floor(num / 64);
       var secondDigit = num % 64;
-      output += numsToChars[firstDigit];
-      output += numsToChars[secondDigit];
+      output.push(numsToChars[firstDigit], numsToChars[secondDigit]);
     }
-    return output;
+    return output.join("");
   },
 
   shortToLong: function (short) {
-    var output = "";
+    if (!shortRegex.test(short)) {
+      throw new Error("`base64-mongo-id.shortToLong` must receive an input matching " + shortRegex.toString());
+    }
+    var output = [];
     for (var i = 0; i < short.length; i += 2) {
       var slice = short.slice(i, i + 2);
       var num = parse2DigitInt64(slice);
       var firstDigit = Math.floor(num / 256);
       var secondDigit = Math.floor(num / 16) % 16;
       var thirdDigit = num % 16;
-      output += numsToChars[firstDigit];
-      output += numsToChars[secondDigit];
-      output += numsToChars[thirdDigit];
+      output.push(numsToChars[firstDigit], numsToChars[secondDigit], numsToChars[thirdDigit]);
     }
-    return output;
+    return output.join("");
   }
   
 };
