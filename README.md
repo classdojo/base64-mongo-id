@@ -1,11 +1,11 @@
 # Base64 Mongo Id
-This library converts mongo ids into base64 strings.  It has no dependencies and works in all browsers (because it doesn't use `atob` and `btoa`, which are not supported in <= IE9).
+This library converts mongo ids into base64 strings.  It has no dependencies and works in all browsers.
 
 ## Methods
-  * `toBase64(mongoIdStr)`:
+  * `toBase64(mongoIdStr)`
     - **Input**: A Mongo id or 24-character hex string
     - **Output**: A 16-character base 64 string
-  * `toHex(shortedIdStr)`:
+  * `toHex(shortedIdStr)`
     - **Input**: A 16-character base 64 string
     - **Output**: A 24-character hex string
 
