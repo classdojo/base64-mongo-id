@@ -1,10 +1,10 @@
 {
   "name": "base64-mongo-id",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Tiny, browser-compatible mongo id shortener",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
