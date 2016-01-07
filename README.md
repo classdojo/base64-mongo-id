@@ -3,11 +3,11 @@ This library converts mongo ids into base64 strings.  It has no dependencies and
 
 ## Methods
   * `toBase64(mongoIdStr)`:
-    - *Input*: A Mongo id or 24-character hex string
-    - *Output*: A 16-character base 64 string
+    - **Input**: A Mongo id or 24-character hex string
+    - **Output**: A 16-character base 64 string
   * `toHex(shortedIdStr)`:
-    - *Input*: A 16-character base 64 string
-    - *Output*: A 24-character hex string
+    - **Input**: A 16-character base 64 string
+    - **Output**: A 24-character hex string
 
 ## Encoding System
 The chosen base 64 encoding uses the following system. The characters were chosen to match common base 64 encoding schemes, but to be URL-safe.
